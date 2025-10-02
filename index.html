@@ -1,123 +1,202 @@
-<body id="home-page">
-	<div id="page-wrapper">
-		<header id="header" role="banner">
-			<ul class="header-menu">
-				<li class="portfolio hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="portfolio.html">
-									<i class="far fa-images"></i>
-									<span>Portfolio</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="profile hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="profile.html">
-									<i class="far fa-address-card"></i>
-									<span>Profile</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="userpic hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<a href="index.html"><img src="http://www.yourbusybee.com/images/avatar.jpg" height="204" width="236" alt=""></a>
-						</div>
-					</div>
-				</li>
-				<li class="resume hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="resume.html">
-									<i class="far fa-file"></i>
-									<span>Resume</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="contact hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="contact.html">
-									<i class="far fa-envelope-open"></i>
-									<span>Contact</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</header><!-- /#header -->
-		
-		<div id="main">
-			<div class="job-title">Graphic &amp; Web Designer</div>
-			<h1>Laura Sage</h1>
-			<p>Versatile and modern websites and graphic design</p>
-			<div class="phone">
-				626.641.0695<br />
-				<i class="fas fa-phone-volume"></i>
-			</div>
-		</div>
-		
-		<footer id="footer" role="contentinfo">
-			<ul>
-				<li class="twitter hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="#">
-									<i class="fab fa-twitter"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="insta hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="#">
-									<i class="fab fa-instagram"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="copyright">©2019 <br /> All rights reserved</li>
-				<li class="linkedin hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="#">
-									<i class="fab fa-linkedin-in"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-				<li class="facebook hexagon">
-					<div class="hexagon-in1">
-						<div class="hexagon-in2">
-							<div class="inner">
-								<a href="#">
-									<i class="fab fa-facebook-f"></i>
-								</a>
-							</div>
-						</div>
-					</div>
-				</li>
-			</ul>
-	    </footer><!-- /#footer -->
-	</div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Ricky Hurtado</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f9f9fb;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    header {
+      background: linear-gradient(135deg, #003366, #d4af37);
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      animation: slideInDown 1s ease;
+    }
+    header p {
+      margin: 8px 0;
+      font-size: 1.1em;
+      animation: fadeIn 1.5s ease;
+    }
+    /* Toggle Idioma */
+    .lang-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: #d4af37;
+      color: #003366;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .lang-toggle:hover {
+      background: #fff;
+      color: #003366;
+      transform: scale(1.05);
+    }
+    /* Contenido */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 0;
+      animation: fadeIn 1.5s ease;
+    }
+    .section {
+      margin-bottom: 40px;
+      transform: translateY(30px);
+      opacity: 0;
+      transition: all 0.8s ease;
+    }
+    .section.visible {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    .section h2 {
+      color: #003366;
+      border-left: 5px solid #d4af37;
+      padding-left: 10px;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+    .item {
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+    .item:hover {
+      transform: translateX(10px);
+    }
+    .item h3 {
+      color: #003366;
+    }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      background: #003366;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      font-size: 0.9em;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+    .skill:hover {
+      background: #d4af37;
+      color: #003366;
+      transform: scale(1.1);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #003366;
+      color: white;
+      font-size: 0.9em;
+      margin-top: 40px;
+      animation: slideInUp 1s ease;
+    }
+    .hidden {
+      display: none;
+    }
+    /* Animaciones */
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideInDown {
+      from {transform: translateY(-50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+    @keyframes slideInUp {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="name">Ricky Alexander Hurtado Simijaca</h1>
+    <p id="title-es">Ingeniero en Telecomunicaciones | Especialización en Comunicaciones Móviles</p>
+    <p id="title-en" class="hidden">Telecommunications Engineer | Mobile Communications Specialization</p>
+    <p>
+      📍 Bogotá, Colombia | 
+      📧 <a href="mailto:ricky.hurtado@hotmail.com">ricky.hurtado@hotmail.com</a> | 
+      📱 +57 302 814 3855
+    </p>
+    <button class="lang-toggle" onclick="toggleLang()">EN / ES</button>
+  </header>
+
+  <div class="container">
+    <!-- CV Español -->
+    <div id="cv-es">
+      <section class="section"><h2>Sobre Mí</h2><p>Ingeniero en Telecomunicaciones con estudios de Especialización en Comunicaciones Móviles, apasionado...</p></section>
+      <section class="section"><h2>Experiencia Laboral</h2><div class="item"><h3>Service Representative – Toshiba</h3><span>2013 – 2023</span><p>Implementación de Redes...</p></div></section>
+      <section class="section"><h2>Educación</h2><div class="item"><h3>Ingeniería en Telecomunicaciones</h3><span>2009 – 2016</span></div></section>
+      <section class="section"><h2>Competencias</h2><div class="skills"><div class="skill">Redes</div><div class="skill">Seguridad</div></div></section>
+      <section class="section"><h2>Idiomas</h2><p>Español (Nativo) | Inglés (Intermedio)</p></section>
+    </div>
+
+    <!-- CV Inglés -->
+    <div id="cv-en" class="hidden">
+      <section class="section"><h2>About Me</h2><p>Telecommunications Engineer with specialization in Mobile Communications...</p></section>
+      <section class="section"><h2>Work Experience</h2><div class="item"><h3>Service Representative – Toshiba</h3><span>2013 – 2023</span><p>Network infrastructure deployment...</p></div></section>
+      <section class="section"><h2>Education</h2><div class="item"><h3>BSc Telecommunications Engineering</h3><span>2009 – 2016</span></div></section>
+      <section class="section"><h2>Skills</h2><div class="skills"><div class="skill">Networking</div><div class="skill">Security</div></div></section>
+      <section class="section"><h2>Languages</h2><p>Spanish (Native) | English (Intermediate)</p></section>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Ricky Hurtado</p>
+  </footer>
+
+  <script>
+    // Fade-in scroll animation
+    const sections = document.querySelectorAll(".section");
+    window.addEventListener("scroll", () => {
+      sections.forEach(sec => {
+        const pos = sec.getBoundingClientRect().top;
+        if (pos < window.innerHeight - 100) sec.classList.add("visible");
+      });
+    });
+
+    // Toggle idioma con animación
+    function toggleLang() {
+      const es = document.getElementById("cv-es");
+      const en = document.getElementById("cv-en");
+      const titleEs = document.getElementById("title-es");
+      const titleEn = document.getElementById("title-en");
+
+      if (es.classList.contains("hidden")) {
+        es.classList.remove("hidden");
+        en.classList.add("hidden");
+        titleEs.classList.remove("hidden");
+        titleEn.classList.add("hidden");
+      } else {
+        es.classList.add("hidden");
+        en.classList.remove("hidden");
+        titleEs.classList.add("hidden");
+        titleEn.classList.remove("hidden");
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
 </body>
+</html>
