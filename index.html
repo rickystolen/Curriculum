@@ -1,202 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Ricky Hurtado</title>
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hoja de Vida - Ricky Alexander Hurtado Simijaca</title>
+<style>
     body {
-      margin: 0;
-      font-family: "Segoe UI", Tahoma, sans-serif;
-      background: #f9f9fb;
-      color: #333;
-      line-height: 1.6;
-      overflow-x: hidden;
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background-color: #f8f9fc;
+        color: #222;
+        line-height: 1.6;
     }
     header {
-      background: linear-gradient(135deg, #003366, #d4af37);
-      color: white;
-      padding: 50px 20px;
-      text-align: center;
-      position: relative;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        background: linear-gradient(135deg, #003366, #d4af37);
+        color: #fff;
+        text-align: center;
+        padding: 40px 20px;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5em;
-      animation: slideInDown 1s ease;
+        margin: 0;
+        font-size: 2.2em;
     }
-    header p {
-      margin: 8px 0;
-      font-size: 1.1em;
-      animation: fadeIn 1.5s ease;
+    header h2 {
+        margin-top: 8px;
+        font-weight: 400;
     }
-    /* Toggle Idioma */
-    .lang-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #d4af37;
-      color: #003366;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 30px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
+    .lang-switch {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #003366;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.3s;
     }
-    .lang-toggle:hover {
-      background: #fff;
-      color: #003366;
-      transform: scale(1.05);
+    .lang-switch:hover {
+        background: #d4af37;
+        color: #003366;
     }
-    /* Contenido */
-    .container {
-      width: 90%;
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 0;
-      animation: fadeIn 1.5s ease;
+    section {
+        max-width: 900px;
+        margin: 40px auto;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        padding: 30px;
+        transition: 0.3s;
     }
-    .section {
-      margin-bottom: 40px;
-      transform: translateY(30px);
-      opacity: 0;
-      transition: all 0.8s ease;
+    section:hover {
+        transform: scale(1.01);
     }
-    .section.visible {
-      transform: translateY(0);
-      opacity: 1;
+    h3 {
+        color: #003366;
+        border-bottom: 2px solid #d4af37;
+        padding-bottom: 4px;
+        margin-bottom: 20px;
     }
-    .section h2 {
-      color: #003366;
-      border-left: 5px solid #d4af37;
-      padding-left: 10px;
-      margin-bottom: 20px;
-      font-size: 1.5em;
+    ul {
+        list-style-type: none;
+        padding: 0;
     }
-    .item {
-      margin-bottom: 20px;
-      transition: transform 0.3s ease;
+    ul li {
+        margin-bottom: 10px;
     }
-    .item:hover {
-      transform: translateX(10px);
+    .certs img {
+        width: 180px;
+        border-radius: 8px;
+        margin: 10px;
+        border: 2px solid #d4af37;
+        transition: 0.3s;
     }
-    .item h3 {
-      color: #003366;
-    }
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .skill {
-      background: #003366;
-      color: white;
-      padding: 8px 15px;
-      border-radius: 20px;
-      font-size: 0.9em;
-      transition: transform 0.3s ease, background 0.3s ease;
-    }
-    .skill:hover {
-      background: #d4af37;
-      color: #003366;
-      transform: scale(1.1);
+    .certs img:hover {
+        transform: scale(1.05);
     }
     footer {
-      text-align: center;
-      padding: 20px;
-      background: #003366;
-      color: white;
-      font-size: 0.9em;
-      margin-top: 40px;
-      animation: slideInUp 1s ease;
+        text-align: center;
+        padding: 30px;
+        background: #003366;
+        color: #fff;
+        border-top: 4px solid #d4af37;
     }
-    .hidden {
-      display: none;
-    }
-    /* Animaciones */
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-    @keyframes slideInDown {
-      from {transform: translateY(-50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-    @keyframes slideInUp {
-      from {transform: translateY(50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
-  </style>
+</style>
 </head>
 <body>
-  <header>
+
+<button class="lang-switch" onclick="toggleLanguage()">English</button>
+
+<header>
     <h1 id="name">Ricky Alexander Hurtado Simijaca</h1>
-    <p id="title-es">Ingeniero en Telecomunicaciones | Especialización en Comunicaciones Móviles</p>
-    <p id="title-en" class="hidden">Telecommunications Engineer | Mobile Communications Specialization</p>
-    <p>
-      📍 Bogotá, Colombia | 
-      📧 <a href="mailto:ricky.hurtado@hotmail.com">ricky.hurtado@hotmail.com</a> | 
-      📱 +57 302 814 3855
-    </p>
-    <button class="lang-toggle" onclick="toggleLang()">EN / ES</button>
-  </header>
+    <h2 id="title">Ingeniero en Telecomunicaciones | Tecnólogo en Telecomunicaciones</h2>
+</header>
 
-  <div class="container">
-    <!-- CV Español -->
-    <div id="cv-es">
-      <section class="section"><h2>Sobre Mí</h2><p>Ingeniero en Telecomunicaciones con estudios de Especialización en Comunicaciones Móviles, apasionado...</p></section>
-      <section class="section"><h2>Experiencia Laboral</h2><div class="item"><h3>Service Representative – Toshiba</h3><span>2013 – 2023</span><p>Implementación de Redes...</p></div></section>
-      <section class="section"><h2>Educación</h2><div class="item"><h3>Ingeniería en Telecomunicaciones</h3><span>2009 – 2016</span></div></section>
-      <section class="section"><h2>Competencias</h2><div class="skills"><div class="skill">Redes</div><div class="skill">Seguridad</div></div></section>
-      <section class="section"><h2>Idiomas</h2><p>Español (Nativo) | Inglés (Intermedio)</p></section>
+<section id="perfil">
+    <h3>Perfil Profesional</h3>
+    <p>Soy una persona activa, recursiva y eficaz, con experiencia en mantenimiento de computadores, redes, soporte técnico e implementación de sistemas de telecomunicaciones. Tengo conocimientos en instalación, configuración y comisionamiento de equipos Huawei, ZTE y Nokia, así como en redes inalámbricas, CCTV e infraestructura de datos. Mi objetivo es seguir desarrollándome profesionalmente en entornos tecnológicos innovadores.</p>
+</section>
+
+<section id="experiencia">
+    <h3>Experiencia Profesional</h3>
+    <ul>
+        <li><strong>Toshiba Global Commerce Solutions (TGCS)</strong> – Service Representative (2014–Presente)<br>Soporte a clientes corporativos, administración de plataformas POS y gestión de incidentes técnicos.</li>
+        <li><strong>Informática Servicios y Soluciones de Colombia S.A. (ISSC – IBM)</strong> – Especialista de Mantenimiento (2013–2014)<br>Configuración de equipos Cisco, soporte remoto HW/SW y supervisión técnica.</li>
+        <li><strong>Comza Telecomunicaciones / Sisolec S.A.</strong> – Supervisor TI 2G/3G (2009–2012)<br>Instalación y comisionamiento de estaciones Nokia UMTS, supervisión de proyectos nacionales.</li>
+        <li><strong>ETB / RH Recursos Humanos</strong> – Técnico Instalador y Comisionador (2007–2009)<br>Implementación de redes SDH, Metro-Ethernet, DSLAM y DWDM.</li>
+    </ul>
+</section>
+
+<section id="educacion">
+    <h3>Educación</h3>
+    <ul>
+        <li><strong>Universidad Distrital Francisco José de Caldas</strong> – Ingeniería en Telecomunicaciones</li>
+        <li><strong>SENA</strong> – Tecnólogo en Telecomunicaciones</li>
+        <li><strong>SENA</strong> – Técnico Profesional en Telecomunicaciones</li>
+        <li><strong>SENA</strong> – Curso Avanzado Trabajo Seguro en Alturas</li>
+        <li><strong>D-Link Institute</strong> – D-Link Basic Certification (DBC)</li>
+    </ul>
+</section>
+
+<section id="certificaciones">
+    <h3>Certificaciones y Diplomas</h3>
+    <div class="certs">
+        <img src="certificado_trabajo_en_alturas.jpg" alt="Certificado Trabajo en Alturas">
+        <img src="diploma_tecnologo_telecomunicaciones.jpg" alt="Diploma Tecnólogo en Telecomunicaciones">
+        <img src="diploma_tecnico_telecomunicaciones.jpg" alt="Diploma Técnico en Telecomunicaciones">
+        <img src="certificacion_dlink_basic.jpg" alt="Certificación D-Link Basic">
+        <img src="certificado_seguridad_redes.jpg" alt="Certificado Seguridad en Redes">
     </div>
+</section>
 
-    <!-- CV Inglés -->
-    <div id="cv-en" class="hidden">
-      <section class="section"><h2>About Me</h2><p>Telecommunications Engineer with specialization in Mobile Communications...</p></section>
-      <section class="section"><h2>Work Experience</h2><div class="item"><h3>Service Representative – Toshiba</h3><span>2013 – 2023</span><p>Network infrastructure deployment...</p></div></section>
-      <section class="section"><h2>Education</h2><div class="item"><h3>BSc Telecommunications Engineering</h3><span>2009 – 2016</span></div></section>
-      <section class="section"><h2>Skills</h2><div class="skills"><div class="skill">Networking</div><div class="skill">Security</div></div></section>
-      <section class="section"><h2>Languages</h2><p>Spanish (Native) | English (Intermediate)</p></section>
-    </div>
-  </div>
+<section id="contacto">
+    <h3>Contacto</h3>
+    <p><strong>Ubicación:</strong> Bogotá, Colombia<br>
+    <strong>Teléfonos:</strong> +57 318 221 0244 / +57 310 425 8198<br>
+    <strong>Email:</strong> <a href="mailto:ricky.hurtado@hotmail.com">ricky.hurtado@hotmail.com</a><br>
+    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank">linkedin.com/in/rickyhurtado</a></p>
+</section>
 
-  <footer>
-    <p>© 2025 Ricky Hurtado</p>
-  </footer>
+<footer>
+    © 2025 Ricky Alexander Hurtado Simijaca — Todos los derechos reservados
+</footer>
 
-  <script>
-    // Fade-in scroll animation
-    const sections = document.querySelectorAll(".section");
-    window.addEventListener("scroll", () => {
-      sections.forEach(sec => {
-        const pos = sec.getBoundingClientRect().top;
-        if (pos < window.innerHeight - 100) sec.classList.add("visible");
-      });
-    });
-
-    // Toggle idioma con animación
-    function toggleLang() {
-      const es = document.getElementById("cv-es");
-      const en = document.getElementById("cv-en");
-      const titleEs = document.getElementById("title-es");
-      const titleEn = document.getElementById("title-en");
-
-      if (es.classList.contains("hidden")) {
-        es.classList.remove("hidden");
-        en.classList.add("hidden");
-        titleEs.classList.remove("hidden");
-        titleEn.classList.add("hidden");
-      } else {
-        es.classList.add("hidden");
-        en.classList.remove("hidden");
-        titleEs.classList.add("hidden");
-        titleEn.classList.remove("hidden");
-      }
-      window.scrollTo({ top: 0, behavior: "smooth" });
+<script>
+let currentLang = 'es';
+function toggleLanguage() {
+    if (currentLang === 'es') {
+        document.querySelector('.lang-switch').innerText = 'Español';
+        document.getElementById('title').innerText = 'Telecommunications Engineer | Telecommunications Technologist';
+        document.querySelector('#perfil h3').innerText = 'Professional Profile';
+        document.querySelector('#perfil p').innerText = 'I am an active, resourceful, and efficient professional with experience in computer maintenance, networking, technical support, and telecommunications system implementation. Skilled in installation, configuration, and commissioning of Huawei, ZTE, and Nokia equipment, as well as wireless networks, CCTV, and data infrastructure. My goal is to continue developing professionally in innovative technological environments.';
+        document.querySelector('#experiencia h3').innerText = 'Professional Experience';
+        document.querySelector('#experiencia ul').innerHTML = `
+            <li><strong>Toshiba Global Commerce Solutions (TGCS)</strong> – Service Representative (2014–Present)<br>Corporate client support, POS platform administration, and incident management.</li>
+            <li><strong>Informática Servicios y Soluciones de Colombia S.A. (ISSC – IBM)</strong> – Maintenance Specialist (2013–2014)<br>Configuration of Cisco devices, remote HW/SW support, and technical supervision.</li>
+            <li><strong>Comza Telecomunicaciones / Sisolec S.A.</strong> – IT Supervisor 2G/3G (2009–2012)<br>Installation and commissioning of Nokia UMTS stations, national project supervision.</li>
+            <li><strong>ETB / RH Recursos Humanos</strong> – Installer and Commissioner Technician (2007–2009)<br>Implementation of SDH, Metro-Ethernet, DSLAM, and DWDM networks.</li>`;
+        document.querySelector('#educacion h3').innerText = 'Education';
+        document.querySelector('#educacion ul').innerHTML = `
+            <li><strong>Francisco José de Caldas District University</strong> – Telecommunications Engineering</li>
+            <li><strong>SENA</strong> – Telecommunications Technologist</li>
+            <li><strong>SENA</strong> – Professional Technician in Telecommunications</li>
+            <li><strong>SENA</strong> – Advanced Safe Work at Heights Course</li>
+            <li><strong>D-Link Institute</strong> – D-Link Basic Certification (DBC)</li>`;
+        document.querySelector('#certificaciones h3').innerText = 'Certifications and Diplomas';
+        document.querySelector('#contacto h3').innerText = 'Contact';
+        document.querySelector('#contacto p').innerHTML = `
+            <strong>Location:</strong> Bogotá, Colombia<br>
+            <strong>Phones:</strong> +57 318 221 0244 / +57 310 425 8198<br>
+            <strong>Email:</strong> <a href="mailto:ricky.hurtado@hotmail.com">ricky.hurtado@hotmail.com</a><br>
+            <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/" target="_blank">linkedin.com/in/rickyhurtado</a>`;
+        currentLang = 'en';
+    } else {
+        location.reload(); // simple way to revert to Spanish version
     }
-  </script>
+}
+</script>
+
 </body>
 </html>
